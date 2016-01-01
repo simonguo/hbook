@@ -9,76 +9,79 @@ var keyboard = require('./keyboard');
 var navigation = require('./navigation');
 var sidebar = require('./sidebar');
 var toolbar = require('./toolbar');
+var custom = require('./custom');
 
 
 function start(config) {
-    // Init sidebar
-    sidebar.init();
+	// Init sidebar
+	sidebar.init();
 
-    // Init keyboard
-    keyboard.init();
+	// Init keyboard
+	keyboard.init();
 
-    // Bind dropdown
-    dropdown.init();
+	// Bind dropdown
+	dropdown.init();
 
-    // Init navigation
-    navigation.init();
+	// Init navigation
+	navigation.init();
 
+	custom.init();
 
-    // Add action to toggle sidebar
-    toolbar.createButton({
-        index: 0,
-        icon: 'fa fa-align-justify',
-        onClick: function(e) {
-            e.preventDefault();
-            sidebar.toggle();
-        }
-    });
+	// Add action to toggle sidebar
+	/*
+	toolbar.createButton({
+		index: 0,
+		icon: 'fa fa-align-justify',
+		onClick: function(e) {
+			e.preventDefault();
+			sidebar.toggle();
+		}
+	});
+    */
 
-    events.trigger('start', config);
-    navigation.notify();
+	events.trigger('start', config);
+	navigation.notify();
 }
 
 // Export APIs for plugins
 var gitbook = {
-    start: start,
-    events: events,
-    state: state,
+	start: start,
+	events: events,
+	state: state,
 
-    // UI sections
-    toolbar: toolbar,
-    sidebar: sidebar,
+	// UI sections
+	toolbar: toolbar,
+	sidebar: sidebar,
 
-    // Read/Write the localstorage
-    storage: storage,
+	// Read/Write the localstorage
+	storage: storage,
 
-    // Create keyboard shortcuts
-    keyboard: keyboard
+	// Create keyboard shortcuts
+	keyboard: keyboard
 };
 
 
 // Modules mapping for plugins
 var MODULES = {
-    'gitbook': gitbook,
-    'jquery': $,
-    'lodash': _
+	'gitbook': gitbook,
+	'jquery': $,
+	'lodash': _
 };
 
 window.gitbook = gitbook;
 window.$ = $;
 window.jQuery = $;
 window.require = function(mods, fn) {
-    mods = _.map(mods, function(mod) {
-        mod = mod.toLowerCase();
-        if (!MODULES[mod]) {
-            throw new Error('GitBook module '+mod+' doesn\'t exist');
-        }
+	mods = _.map(mods, function(mod) {
+		mod = mod.toLowerCase();
+		if (!MODULES[mod]) {
+			throw new Error('GitBook module ' + mod + ' doesn\'t exist');
+		}
 
-        return MODULES[mod];
-    });
+		return MODULES[mod];
+	});
 
-    fn.apply(null, mods);
+	fn.apply(null, mods);
 };
 
 module.exports = {};
-
