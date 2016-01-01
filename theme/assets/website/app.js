@@ -24336,9 +24336,10 @@ return jQuery;
 
 },{}],11:[function(require,module,exports){
 var $ = require('jquery');
+var sidebar = require('./sidebar');
 
 function init() {
-    
+
 	$(".chapter.active").parents(".chapter").addClass("active");
 	$(".chapter.active").parents(".chapter").find(">span>.btn-open,>a>.btn-open").removeClass("fa-folder-o").addClass("fa-folder-open-o");
 
@@ -24355,22 +24356,9 @@ function init() {
 
 
 	$(".btn-toggle-summary").click(function() {
-		var $book = $(".book");
-		$book.removeClass("without-animation");
-		if (!$book.hasClass("with-summary")) {
-			$book.addClass("with-summary");
-			setLS(":sidebar", true);
-			return;
-		}
-		$book.removeClass("with-summary");
-		setLS(":sidebar", false);
+		sidebar.toggle();
 	});
 
-	function setLS(key, value) {
-		if (window.localStorage) {
-			localStorage[key] = value;
-		}
-	}
 
 }
 
@@ -24378,7 +24366,7 @@ module.exports = {
 	init: init
 };
 
-},{"jquery":8}],12:[function(require,module,exports){
+},{"./sidebar":19,"jquery":8}],12:[function(require,module,exports){
 var $ = require('jquery');
 
 function toggleDropdown(e) {
@@ -24442,6 +24430,7 @@ function start(config) {
 	custom.init();
 
 	// Add action to toggle sidebar
+	/*
 	toolbar.createButton({
 		index: 0,
 		icon: 'fa fa-align-justify',
@@ -24450,6 +24439,7 @@ function start(config) {
 			sidebar.toggle();
 		}
 	});
+    */
 
 	events.trigger('start', config);
 	navigation.notify();
