@@ -49,7 +49,7 @@ $ hbook build
 ```
 
 - variables-title: 配置文档标题，显示在页面顶部;
-- variables-theme: 模板颜色,当前支持:theme-green,theme-purple,theme-orange;
+- variables-theme: 模板颜色,当前支持:theme-green,theme-purple,theme-orange,theme-deepblue;
 - variables-copyright: 配置版权信息，显示在页面底部;
 - collapsible_menu: 使用折叠菜单;
 - level_number: 使用菜单结构序号;
