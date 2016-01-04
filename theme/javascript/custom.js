@@ -22,6 +22,8 @@ function init() {
 		sidebar.toggle();
 	});
 
+    console.log("init costom");
+
 
 }
 

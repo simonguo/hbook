@@ -1,6 +1,6 @@
 {
     "name": "hbook",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "homepage": "https://www.gitbook.com",
     "description": "Library and cmd utility to generate HBooks",
     "main": "lib/index.js",
