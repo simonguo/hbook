@@ -3,6 +3,29 @@ Fork: [https://github.com/GitbookIO/gitbook](https://github.com/GitbookIO/gitboo
 
 [![NPM version](https://badge.fury.io/js/hbook.svg)](http://badge.fury.io/js/hbook) [![Build Status](https://travis-ci.org/simonguo/hbook.png?branch=master)](https://travis-ci.org/simonguo/hbook)
 
+
+
+**功能**
+- 提供多种色彩模板选择:theme-green,theme-purple,theme-orange,theme-gray;
+- 提供菜单可折叠配置;
+- 提供是否生成菜单序号配置;
+- 提供标题与版权信息设置。
+
+电脑上的效果
+
+![image](https://raw.githubusercontent.com/simonguo/gitbook-ext/master/demo-pc.png)
+
+手机上的效果
+
+![image](https://raw.githubusercontent.com/simonguo/gitbook-ext/master/demo-m.png)
+
+预览效果 [http://f2edocs.com/](http://f2edocs.com/)
+
+深蓝色主题效果
+
+![image](https://raw.githubusercontent.com/simonguo/gitbook-ext/master/demo-deepblue.png
+)
+
 ## 安装
 
 ```
@@ -54,3 +77,7 @@ $ hbook build
 - collapsible_menu: 使用折叠菜单;
 - level_number: 使用菜单结构序号;
 - links: 开启一些连接.
+
+## 谁在用
+[http://f2edocs.com/](http://f2edocs.com/) 
+
