@@ -1,12 +1,10 @@
 # HBook
 Fork: [https://github.com/GitbookIO/gitbook](https://github.com/GitbookIO/gitbook)
 
-[![NPM version](https://badge.fury.io/js/hbook.svg)](http://badge.fury.io/js/hbook) [![Build Status](https://travis-ci.org/simonguo/hbook.png?branch=master)](https://travis-ci.org/simonguo/hbook)
-
-
+[![NPM version](https://badge.fury.io/js/hbook.svg)](http://badge.fury.io/js/hbook)
 
 **功能**
-- 提供多种色彩模板选择:theme-green,theme-purple,theme-orange,theme-gray;
+- 提供多种色彩模板选择;
 - 提供菜单可折叠配置;
 - 提供是否生成菜单序号配置;
 - 提供标题与版权信息设置。
@@ -71,13 +69,28 @@ $ hbook build
 }
 ```
 
+## 自定义样式
+
+```json
+"styles": {
+    "website": "styles/website.css",
+    "ebook": "styles/ebook.css",
+    "pdf": "styles/pdf.css",
+    "mobi": "styles/mobi.css",
+    "epub": "styles/epub.css"
+}
+```
+
+
 - variables-title: 配置文档标题，显示在页面顶部;
 - variables-theme: 模板颜色,当前支持:theme-green,theme-purple,theme-orange,theme-deepblue;
 - variables-copyright: 配置版权信息，显示在页面底部;
 - collapsible_menu: 使用折叠菜单;
 - level_number: 使用菜单结构序号;
 - links: 开启一些连接.
+- styles: 自定义css
+
 
 ## 谁在用
-[http://f2edocs.com/](http://f2edocs.com/) 
+[http://f2edocs.com/](http://f2edocs.com/)
 
