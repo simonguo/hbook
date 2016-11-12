@@ -86,6 +86,11 @@ body {
 			background: #2980b9;
 		}
 	}
+    .theme-default {
+		.nav {
+			background: #0b8cff;
+		}
+	}
 }
 @media (min-width: 1240px) {
 	.page-inner {
@@ -93,6 +98,58 @@ body {
 		padding: 20px 90px !important;
 	}
 }
+
+.theme-default{
+    @H050:#e7f4ff;
+    @H100:#b6ddff;
+    @H200:#85c6ff;
+    @H300:#5cb2ff;
+    @H400:#349fff;
+    @H500:#0b8cff;
+    @H600:#0a7bdf;
+    @H700:#0869bf;
+    @H800:#07589f;
+    @H900:#064680;
+    .header {
+		background: @H500;
+	}
+	.book {
+		bottom: 0;
+		.book-summary {
+			background: #e9eef1;
+			color: #575757;
+			ul.summary {
+				span {
+					color: #777;
+				}
+				li a {
+					color: #575757;
+				}
+				li.active > a,
+				li a:hover {
+					color: #333;
+				}
+			}
+		}
+	}
+	.nav > li:hover {
+		background: @H600;
+	}
+    .nav > li.active {
+		background: @H700;
+	}
+	.btn-toggle-summary {
+		color: #fff;
+		float: left;
+		height: 50px;
+		padding: 15px 18px;
+		background: @H600;
+	}
+	.footer {
+		display: none;
+	}
+}
+
 .theme-green {
 	.header {
 		background: #1b9451;

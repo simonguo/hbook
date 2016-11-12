@@ -1,7 +1,7 @@
 {
   "name": "hbook",
-  "version": "1.0.11",
-  "homepage": "https://www.gitbook.com",
+  "version": "1.0.12",
+  "homepage": "https://github.com/simonguo/hbook",
   "description": "Library and cmd utility to generate HBooks",
   "main": "lib/index.js",
   "dependencies": {
@@ -80,17 +80,9 @@
   "author": "FriendCode Inc. <contact@gitbook.com>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/GitbookIO/gitbook/issues"
+    "url": "https://github.com/simonguo/hbook/issues"
   },
   "contributors": [
-    {
-      "name": "Aaron O'Mullan",
-      "email": "aaron@gitbook.com"
-    },
-    {
-      "name": "Samy Pessé",
-      "email": "samy@gitbook.com"
-    },
     {
       "name": "Simon Guo",
       "email": "simonguo.2009@gmail.com"

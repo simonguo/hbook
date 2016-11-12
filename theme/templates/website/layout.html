@@ -16,7 +16,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ staticBase }}/images/apple-touch-icon-precomposed-152.png">
     <link rel="shortcut icon" href="{{ staticBase }}/images/favicon.ico" type="image/x-icon"> {% block style %}{% endblock %} {% block head %}{% endblock %} {{ htmlSnippet("head:end")|default("", true)|safe }}
     {% if options.collapsible_menu == true %}
     <style>
@@ -35,9 +34,9 @@
         <a aria-label="Table of Contents" class="btn-toggle-summary" href="#">
             <i class="fa fa-align-justify"></i>
         </a>
-        <a class="logo">{{ options.variables.title }}</a>
+        <a class="logo">{{ options.title }}</a>
         <ul class="nav">
-            {% for item in options.variables.nav %}
+            {% for item in options.navs %}
             <li {% if item.active %} class="active" {%endif%}><a href="{{ item.url }}">{{ item.title }}</a></li>
             {% endfor%}
         </ul>
