@@ -7,6 +7,7 @@ var minifyCSS = require('gulp-minify-css');
 var browserify = require('browserify');
 var mergeStream = require('merge-stream');
 var source = require('vinyl-source-stream');
+var uglify = require('gulp-uglify');
 
 gulp.task('css', function() {
     var merged = mergeStream();
@@ -36,12 +37,19 @@ gulp.task('js', function() {
         .pipe(gulp.dest('./theme/assets/website'));
 });
 
+gulp.task('jsmin', function() {
+     gulp.src('./theme/assets/website/app.js') //多个文件以数组形式传入
+        .pipe(uglify())
+        .pipe(rename('app-min.js'))
+        .pipe(gulp.dest('./theme/assets/website'));
+});
+
 gulp.task('assets', function() {
     return gulp.src('./node_modules/font-awesome/fonts/*')
     .pipe(gulp.dest('theme/assets/website/fonts/fontawesome/'));
 });
 
-gulp.task('default', ['css', 'js', 'assets'], function() {
+gulp.task('default', ['css', 'js','jsmin', 'assets'], function() {
 
 });
 
