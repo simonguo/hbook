@@ -36,6 +36,12 @@ $ npm install hbook-cli -g
 $ hbook init
 ```
 
+## 更新
+
+```
+hbook versions:update latest
+```
+
 ## 编译，生成电子书
 
 ```
