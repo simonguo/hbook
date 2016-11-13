@@ -1,6 +1,6 @@
 {
   "name": "hbook",
-  "version": "1.2.15",
+  "version": "1.2.17",
   "homepage": "https://github.com/simonguo/hbook",
   "description": "Library and cmd utility to generate HBooks",
   "main": "lib/index.js",
