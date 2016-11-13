@@ -4,6 +4,7 @@ Fork: [https://github.com/GitbookIO/gitbook](https://github.com/GitbookIO/gitboo
 [![NPM version](https://badge.fury.io/js/hbook.svg)](http://badge.fury.io/js/hbook)
 
 **功能**
+- 支持中文搜索;
 - 提供多种色彩模板选择;
 - 提供菜单可折叠配置;
 - 提供是否生成菜单序号配置;

@@ -38,14 +38,14 @@ gulp.task('js', function() {
 });
 
 gulp.task('jsmin', function() {
-     gulp.src('./theme/assets/website/app.js') //多个文件以数组形式传入
+     return gulp.src('./theme/assets/website/app.js') //多个文件以数组形式传入
         .pipe(uglify())
         .pipe(rename('app-min.js'))
         .pipe(gulp.dest('./theme/assets/website'));
 });
 
 gulp.task('assets', function() {
-    return gulp.src('./node_modules/font-awesome/fonts/*')
+     return gulp.src('./node_modules/font-awesome/fonts/*')
     .pipe(gulp.dest('theme/assets/website/fonts/fontawesome/'));
 });
 
