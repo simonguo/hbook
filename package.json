@@ -1,6 +1,6 @@
 {
   "name": "hbook",
-  "version": "1.2.26",
+  "version": "1.2.27",
   "homepage": "https://github.com/simonguo/hbook",
   "description": "Library and cmd utility to generate HBooks",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "juice": "3.0.1",
     "lodash": "3.10.1",
     "merge-defaults": "0.2.1",
-    "npm": "2.4.1",
+    "npm": "3.7.5",
     "npmi": "0.1.1",
     "nunjucks": "3.0.0",
     "nunjucks-autoescape": "1.0.1",
